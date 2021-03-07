@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RegTestapp": {
+      "commandName": "Project",
+      "commandLineArgs": " -\"\\w{10}.com\" -\"E:\\CSrepo\\CSrepos\\RegTestapp\\RegTestapp\\.sourcetmp\""
+    }
+  }
+}

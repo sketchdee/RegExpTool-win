@@ -1,0 +1,13 @@
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.exe
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.deps.json
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.runtimeconfig.json
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.runtimeconfig.dev.json
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.dll
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\bin\Release\netcoreapp3.1\RegTestapp.pdb
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.AssemblyInfoInputs.cache
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.AssemblyInfo.cs
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.csproj.CoreCompileInputs.cache
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.dll
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.pdb
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.genruntimeconfig.cache
+E:\CSrepo\CSrepos\RegTestapp\RegTestapp\obj\Release\netcoreapp3.1\RegTestapp.csprojAssemblyReference.cache

@@ -1,0 +1,4 @@
+.idea
+/target
+/javafx_home
+*.sh

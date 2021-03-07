@@ -1,0 +1,84 @@
+******************************System Enviroment******************************
+* USERDOMAIN_ROAMINGPROFILE: VOSTRO-145480
+* PROCESSOR_LEVEL: 6
+* SESSIONNAME: Console
+* ALLUSERSPROFILE: C:\ProgramData
+* PROCESSOR_ARCHITECTURE: AMD64
+* NVIDIAWHITELISTED: 0x01
+* PSModulePath: C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\PowerShell\Modules\
+* SystemDrive: C:
+* USERNAME: work-group
+* DHI_MIKE_2014: D:\Program Files (x86)\DHI\2014\bin\x64\
+* ProgramFiles(x86): C:\Program Files (x86)
+* FPS_BROWSER_USER_PROFILE_STRING: Default
+* PATHEXT: .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+* DriverData: C:\Windows\System32\Drivers\DriverData
+* SHIM_MCCOMPAT: 0x810000001
+* ProgramData: C:\ProgramData
+* ProgramW6432: C:\Program Files
+* HOMEPATH: \Users\Administrator
+* PROCESSOR_IDENTIFIER: Intel64 Family 6 Model 158 Stepping 9, GenuineIntel
+* ProgramFiles: C:\Program Files
+* PUBLIC: C:\Users\Public
+* windir: C:\WINDOWS
+* =::: ::\
+* LOCALAPPDATA: C:\Users\Administrator\AppData\Local
+* DHI_MZ_APP: D:\Program Files (x86)\DHI\2014\bin\x64\MzShell.exe
+* USERDOMAIN: VOSTRO-145480
+* AGSDESKTOPJAVA: C:\Program Files (x86)\ArcGIS\Desktop10.8\
+* FPS_BROWSER_APP_PROFILE_STRING: Internet Explorer
+* I_MPI_ROOT: C:\Program Files (x86)\Intel\MPI-RT\4.0.2.005\
+* LOGONSERVER: \\VOSTRO-145480
+* asl.log: Destination=file
+* OneDrive: C:\Users\Administrator\OneDrive
+* APPDATA: C:\Users\Administrator\AppData\Roaming
+* VBOX_MSI_INSTALL_PATH: C:\Program Files\Oracle\VirtualBox\
+* CommonProgramFiles: C:\Program Files\Common Files
+* Path: C:\Users\Administrator\AppData\Roaming\ActiveState\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\MPI-RT\4.0.2.005\em64t\bin;C:\Program Files (x86)\Intel\MPI-RT\4.0.2.005\ia32\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\VanDyke Software\Clients\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Program Files\MATLAB\R2020a\runtime\win64;D:\Program Files\MATLAB\R2020a\bin;D:\Program Files\MATLAB\R2015b\runtime\win64;D:\Program Files\MATLAB\R2015b\bin;D:\Program Files\MATLAB\R2015b\polyspace\bin;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Wolfram Research\WolframScript\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\ArcGIS\Bin;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\bin\;C:\Program Files\Azure Data Studio\bin;D:\Program Files\MATLAB\R2020a\polyspace\bin;C:\Program Files (x86)\dotnet\;D:\Strawberry\c\bin;D:\Strawberry\perl\site\bin;D:\Strawberry\perl\bin;C:\Program Files\PuTTY\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Administrator\AppData\Local\Programs\Python\Python38\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;D:\Strawberry\perl\bin;C:\Users\Administrator\AppData\Local\GitHubDesktop\bin
+* OS: Windows_NT
+* COMPUTERNAME: VOSTRO-145480
+* PROCESSOR_REVISION: 9e09
+* CommonProgramW6432: C:\Program Files\Common Files
+* ComSpec: C:\WINDOWS\system32\cmd.exe
+* SystemRoot: C:\WINDOWS
+* TEMP: C:\Users\ADMINI~1\AppData\Local\Temp
+* HOMEDRIVE: C:
+* USERPROFILE: C:\Users\Administrator
+* TMP: C:\Users\ADMINI~1\AppData\Local\Temp
+* CommonProgramFiles(x86): C:\Program Files (x86)\Common Files
+* NUMBER_OF_PROCESSORS: 8
+* IDEA_INITIAL_DIRECTORY: C:\Users\Administrator\Desktop\Just do it
+*****************************************************************************
+2021-03-05 10:35:59, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:35:59, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:35:59, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:36:20, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:36:20, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:36:20, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:36:49, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:36:49, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:36:49, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:36:56, Info               RegExpTool   lambda$start$0: RegexpTool closed.
+2021-03-05 10:37:26, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:37:26, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:37:26, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:37:31, Info               RegExpTool   lambda$start$0: RegexpTool closed.
+2021-03-05 10:39:06, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:39:06, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:39:06, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:39:16, Info               RegExpTool   MenuEditRegexpHistoryOnAcion: Edit History file.
+2021-03-05 10:39:21, Info               RegExpTool   MenuEditMypattensOnAction: Edit mypatterns file.
+2021-03-05 10:39:24, Info               RegExpTool   MenuEditSettingsOnAction: Edit Setting file.
+2021-03-05 10:42:33, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:42:33, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:42:33, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:42:37, Info               RegExpTool   MenuEditRegexpHistoryOnAcion: Edit History file.
+2021-03-05 10:43:11, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 10:43:12, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 10:43:12, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 10:43:16, Info               RegExpTool   MenuEditRegexpHistoryOnAcion: Edit History file.
+2021-03-05 10:51:46, Info               RegExpTool   lambda$start$0: RegexpTool closed.
+2021-03-05 11:12:53, Info               RegExpTool   initialize: Start RegExp Tool.
+2021-03-05 11:12:53, Info               RegExpTool   ApplySetting: ApplySetting
+2021-03-05 11:12:53, Info               RegExpTool   initialize: initialize program end.
+2021-03-05 11:12:55, Info               RegExpTool   lambda$start$0: RegexpTool closed.

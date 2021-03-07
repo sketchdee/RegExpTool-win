@@ -1,0 +1,19 @@
+\EXRESOURCE
+├─helpdocumet           //handbook
+├─netcoreapp3.1         //C# binary file
+├─regpython             //python script,use python to execute it.
+└─RegTestapp            //visual studio projetcfile, you can view how to generate netcoreapp3.1.
+    └─RegTestapp
+        ├─bin
+        │  ├─Debug
+        │  │  └─netcoreapp3.1
+        │  └─Release
+        │      └─netcoreapp3.1
+        ├─obj
+        │  ├─Debug
+        │  │  └─netcoreapp3.1
+        │  └─Release
+        │      └─netcoreapp3.1
+        └─Properties
+.sourcetmp              //the file save object text.don't editor it,it always wil be rewrite in.
+settings                //application setting file,all the setting are in it,if it has changed and don't satified request,the program will save a default setting in it,it may mean you need to set again.

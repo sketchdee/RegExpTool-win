@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="RootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegExpTool.Controller">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="MenuFileClose" mnemonicParsing="false" onAction="#MenuFileCloseOnAction" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem fx:id="MenuEditRegexpHistory" mnemonicParsing="false" onAction="#MenuEditRegexpHistoryOnAcion" text="Edit regexp history" />
+                  <MenuItem fx:id="MenuEditMypattens" mnemonicParsing="false" onAction="#MenuEditMypattensOnAction" text="Edit mypatterns" />
+                  <MenuItem fx:id="MenuEditSettings" mnemonicParsing="false" onAction="#MenuEditSettingsOnAction" text="Edit settings" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="MenuHelpHandbook" mnemonicParsing="false" onAction="#MenuHelpHandbookOnAction" text="RegExp handbook" />
+                  <MenuItem fx:id="MenuHelpAbout" mnemonicParsing="false" onAction="#MenuHelpAboutOnAction" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <TabPane fx:id="sidTabPane" prefHeight="200.0" prefWidth="400.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="SettingTab">
+                    <content>
+                        <VBox fx:id="sidVBox" minWidth="0.0" prefHeight="568.0" prefWidth="349.0">
+                            <children>
+                        <Label text="Startup Options:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Label>
+                                <CheckBox fx:id="setAutocheck" mnemonicParsing="false" prefHeight="30.0" text="set default auto check " />
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="setTextfromTabFirst" mnemonicParsing="false" prefHeight="30.0" text="set default show 'Text from' tab first" />
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="setGetTextFromLRun" mnemonicParsing="false" prefHeight="30.0" text="set default get Text form Last Run" />
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="setShowMutipleResult" mnemonicParsing="false" prefHeight="30.0" text="set default show mutiple engings result" />
+                                <Separator prefHeight="0.0" prefWidth="361.0" />
+                                <CheckBox fx:id="ShowConsoleInfo" mnemonicParsing="false" prefHeight="30.0" text="show console informations " />
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="SaveHistory" mnemonicParsing="false" prefHeight="30.0" text="save history regexp" />
+                                <Separator prefWidth="200.0" />
+                                <CheckBox fx:id="AutoSaveHis2MyPatterns" layoutX="10.0" mnemonicParsing="false" prefHeight="30.0" text="auto save history  to my patterns" />
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="321.0">
+                           <children>
+                              <Label text="Default side Tab:" />
+                              <ChoiceBox fx:id="StartSidetabChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="18.0" prefWidth="321.0">
+                           <children>
+                              <Label text="single result show:" />
+                              <ChoiceBox fx:id="SingleResultChoiceBox" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </ChoiceBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Button fx:id="SaveSettingButton" mnemonicParsing="false" onAction="#SaveSettingButtonOnAction" prefHeight="0.0" prefWidth="62.0" text="Save">
+                           <VBox.margin>
+                              <Insets left="250.0" top="100.0" />
+                           </VBox.margin>
+                        </Button>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="5.0" top="20.0" />
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="MyPatternsTab">
+                    <content>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                        <TableView fx:id="MyPatternsTableView" />
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" right="5.0" />
+                            </padding>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="CheatSheetTab">
+                    <content>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="CheatSheetTableView" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" right="5.0" />
+                     </padding>
+                        </HBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="RegExpRefTab">
+                    <content>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                            <padding>
+                                <Insets bottom="5.0" right="5.0" />
+                            </padding>
+                     <children>
+                        <TableView fx:id="RegExpRefTableView" />
+                     </children>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </left>
+    <center>
+        <GridPane BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="331.0" minHeight="10.0" prefHeight="112.0" valignment="CENTER" />
+                <RowConstraints maxHeight="507.0" minHeight="10.0" prefHeight="234.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="507.0" minHeight="10.0" prefHeight="223.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox prefHeight="42.0" prefWidth="600.0">
+                    <children>
+                        <Label prefHeight="0.0" prefWidth="600.0" text="Expression">
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                            <effect>
+                                <SepiaTone />
+                            </effect>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="600.0">
+                            <children>
+                                <TextField fx:id="RegexpTextField" prefHeight="48.0" prefWidth="472.0">
+                                    <HBox.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font></TextField>
+                                <Button fx:id="CheckButton" mnemonicParsing="false" onAction="#CheckButtonOnAction" text="Check" />
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <CheckBox fx:id="isautocheck" mnemonicParsing="false" text="auto check">
+                            <VBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </VBox.margin>
+                        </CheckBox>
+                    </children>
+                </VBox>
+                <TabPane fx:id="TextTabPane" prefHeight="181.0" prefWidth="595.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                    <tabs>
+                        <Tab text="Text">
+                            <content>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                                        <TextArea fx:id="MatchTextArea" prefHeight="172.0" prefWidth="584.0" BorderPane.alignment="CENTER">
+                                            <BorderPane.margin>
+                                                <Insets />
+                                            </BorderPane.margin>
+                                        </TextArea>
+                           </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Text from...">
+                            <content>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                    <center>
+                                        <TextArea fx:id="MatchTextArea2" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                            <BorderPane.margin>
+                                                <Insets right="5.0" />
+                                            </BorderPane.margin>
+                                        </TextArea>
+                                    </center>
+                                    <right>
+                                        <VBox prefHeight="172.0" prefWidth="82.0" BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Button fx:id="FromfileButton" alignment="TOP_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#FromfileButtonOnAction" text="file...">
+                                                    <VBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </VBox.margin>
+                                                </Button>
+                                                <Button fx:id="FromurlButton" mnemonicParsing="false" onAction="#FromurlButtonOnAction" text="url &gt;">
+                                                    <VBox.margin>
+                                                        <Insets left="10.0" top="10.0" />
+                                                    </VBox.margin>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </right>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                    <GridPane.margin>
+                        <Insets bottom="10.0" right="5.0" />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets top="5.0" />
+                    </padding>
+                </TabPane>
+                <TabPane fx:id="ResultTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="2">
+                    <tabs>
+                        <Tab text="mutiple">
+                            <content>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <TableView fx:id="MutipleResultTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                        <Tab text="single">
+                            <content>
+                                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                           <center>
+                              <TableView fx:id="SingleResultTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                                </BorderPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                    <GridPane.margin>
+                        <Insets right="5.0" />
+                    </GridPane.margin>
+                </TabPane>
+            </children>
+         <BorderPane.margin>
+            <Insets left="5.0" />
+         </BorderPane.margin>
+        </GridPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,25 @@
+#RegExpToll Setting file.
+#The line start with '#' will be ignore.
+#Whether automatic checking is enabled by default on startup.
+defaultautocheck=true
+#Whether show advace matching text
+defaultshow2=true
+#Whether get text from last run,if not default matching text will be empty.
+defultgettextfromlr=false
+#Whether show mutiple result first.
+defaultshowmutipleresult=true
+#Whether show console informations.
+showconsoleinfo=true
+#Whether save history Regexp to history file.
+savehistory=true
+#Whether automatic save regexp to my patterns which is show and save in application.
+autosavehis2mypatterns=false
+#startup side tab,
+#0 settings tab
+#1 MyPatterns tab
+#2 Cheat Sheet tab
+#3 RegExp Referance tab
+#4 hide the side tab
+defaultsidetab=0
+#0 JAVA,1 Python,2 C#
+defaultsingleresult=0
