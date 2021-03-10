@@ -2,6 +2,7 @@ package RegExpTool;
 
 //regexp
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.regex.*;
 
@@ -68,7 +69,7 @@ public class Tools {
         BufferedReader reader = null;
         StringBuffer sbf = new StringBuffer();
         try {
-            reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new FileReader(file,Charset.forName ( "utf-8" )));
             String tempStr;
             while ((tempStr = reader.readLine()) != null) {
                 sbf.append(tempStr+"\n");

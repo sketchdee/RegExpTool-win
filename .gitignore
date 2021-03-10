@@ -2,3 +2,4 @@
 /target
 /javafx_home
 *.sh
+log/*

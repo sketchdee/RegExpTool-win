@@ -12,6 +12,7 @@ import javax.swing.text.BadLocationException;
 import java.awt.datatransfer.*;
 import java.awt.event.*;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.Stack;
 
 public class Notepad extends JFrame implements ActionListener, WindowListener {
@@ -230,7 +231,7 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
 
     public void OpenFile (String fname) throws IOException {
         //open file code here
-        BufferedReader d = new BufferedReader (new InputStreamReader (new FileInputStream (fname)));
+        BufferedReader d = new BufferedReader (new InputStreamReader (new FileInputStream (fname), Charset.forName ( "utf-8")));
         String l;
         //clear the textbox
         jta.setText ("");
