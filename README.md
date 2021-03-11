@@ -42,3 +42,4 @@ JavaFX has been removed since Java8, which means that JavaFX is a third-party li
 #### (2) unzip JAVAFX SDK and modify the "runregexptool.bat",change the "--module-path".
 #### (3) Double click the "runregexptool.bat" in Windows explorer to run the ".jar" package.
 #### (4) The ".jar" package is created by maven, you can use the jar plugin in maven to creat it again.
+If you're struggling with which graphics library to use to implement your Windows, I would suggest you take a look at software based on this library. IDEA uses Swing, VS Code uses Electron, Visual Studio uses WPF, and you can also see that your KDE Plasma desktop is based on Qt. 
