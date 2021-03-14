@@ -33,17 +33,17 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>14</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>14</version>
+            <version>11</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>14</version>
+            <version>11</version>
         </dependency>
     </dependencies>
 
@@ -118,7 +118,6 @@
                             <classpathPrefix>libs/</classpathPrefix>
                             <!-- jar启动入口类，这个需要修改-->
                             <mainClass>RegExpTool.Main</mainClass>
-                            <testMain></testMain>
                         </manifest>
                     </archive>
                    <!-- <outputDirectory>${project.build.directory}/install</outputDirectory>-->

@@ -1037,7 +1037,7 @@ public class Controller {
         java.net.CookieHandler.setDefault(null);
         WebEngine webEngine=new WebEngine();
         webEngine = helpWebView.getEngine();
-        webEngine.load("file://"+ new File(Controller.resdir.get("handbook")).getAbsolutePath ());
+        webEngine.load( "file://"+new File(Controller.resdir.get("handbook")).getAbsolutePath ());
         System.out.println("open handbook:"+new File(Controller.resdir.get("handbook")).getAbsolutePath ());
 
         bop.setCenter(helpWebView);
