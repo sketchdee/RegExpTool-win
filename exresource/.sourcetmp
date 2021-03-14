@@ -1,1 +1,86 @@
-<!DOCTYPE html><!--STATUS OK--><html> <head><meta http-equiv=content-type content=text/html;charset=utf-8><meta http-equiv=X-UA-Compatible content=IE=Edge><meta content=always name=referrer><link rel=stylesheet type=text/css href=http://s1.bdstatic.com/r/www/cache/bdorz/baidu.min.css><title>百度一下，你就知道</title></head> <body link=#0000cc> <div id=wrapper> <div id=head> <div class=head_wrapper> <div class=s_form> <div class=s_form_wrapper> <div id=lg> <img hidefocus=true src=//www.baidu.com/img/bd_logo1.png width=270 height=129> </div> <form id=form name=f action=//www.baidu.com/s class=fm> <input type=hidden name=bdorz_come value=1> <input type=hidden name=ie value=utf-8> <input type=hidden name=f value=8> <input type=hidden name=rsv_bp value=1> <input type=hidden name=rsv_idx value=1> <input type=hidden name=tn value=baidu><span class="bg s_ipt_wr"><input id=kw name=wd class=s_ipt value maxlength=255 autocomplete=off autofocus></span><span class="bg s_btn_wr"><input type=submit id=su value=百度一下 class="bg s_btn"></span> </form> </div> </div> <div id=u1> <a href=http://news.baidu.com name=tj_trnews class=mnav>新闻</a> <a href=http://www.hao123.com name=tj_trhao123 class=mnav>hao123</a> <a href=http://map.baidu.com name=tj_trmap class=mnav>地图</a> <a href=http://v.baidu.com name=tj_trvideo class=mnav>视频</a> <a href=http://tieba.baidu.com name=tj_trtieba class=mnav>贴吧</a> <noscript> <a href=http://www.baidu.com/bdorz/login.gif?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 name=tj_login class=lb>登录</a> </noscript> <script>document.write('<a href="http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u='+ encodeURIComponent(window.location.href+ (window.location.search === "" ? "?" : "&")+ "bdorz_come=1")+ '" name="tj_login" class="lb">登录</a>');</script> <a href=//www.baidu.com/more/ name=tj_briicon class=bri style="display: block;">更多产品</a> </div> </div> </div> <div id=ftCon> <div id=ftConw> <p id=lh> <a href=http://home.baidu.com>关于百度</a> <a href=http://ir.baidu.com>About Baidu</a> </p> <p id=cp>&copy;2017&nbsp;Baidu&nbsp;<a href=http://www.baidu.com/duty/>使用百度前必读</a>&nbsp; <a href=http://jianyi.baidu.com/ class=cp-feedback>意见反馈</a>&nbsp;京ICP证030173号&nbsp; <img src=//www.baidu.com/img/gs.gif> </p> </div> </div> </div> </body> </html>
+# Atom
+
+[![Build status](https://dev.azure.com/github/Atom/_apis/build/status/Atom%20Production%20Branches?branchName=master)](https://dev.azure.com/github/Atom/_build/latest?definitionId=32&branchName=master)
+[![Dependency Status](https://david-dm.org/atom/atom.svg)](https://david-dm.org/atom/atom)
+[![Join the Atom Community on Slack](https://atom-slack.herokuapp.com/badge.svg)](https://atom-slack.herokuapp.com)
+
+Atom is a hackable text editor for the 21st century, built on [Electron](https://github.com/electron/electron), and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.
+
+![Atom](https://user-images.githubusercontent.com/378023/49132477-f4b77680-f31f-11e8-8357-ac6491761c6c.png)
+
+![Atom Screenshot](https://user-images.githubusercontent.com/378023/49132478-f4b77680-f31f-11e8-9e10-e8454d8d9b7e.png)
+
+Visit [atom.io](https://atom.io) to learn more or visit the [Atom forum](https://discuss.atom.io).
+
+Follow [@AtomEditor](https://twitter.com/atomeditor) on Twitter for important
+announcements.
+
+This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+By participating, you are expected to uphold this code. Please report unacceptable behavior to atom@github.com.
+
+## Documentation
+
+If you want to read about using Atom or developing packages in Atom, the [Atom Flight Manual](https://flight-manual.atom.io) is free and available online. You can find the source to the manual in [atom/flight-manual.atom.io](https://github.com/atom/flight-manual.atom.io).
+
+The [API reference](https://atom.io/docs/api) for developing packages is also documented on Atom.io.
+
+## Installing
+
+### Prerequisites
+- [Git](https://git-scm.com)
+
+### macOS
+
+Download the latest [Atom release](https://github.com/atom/atom/releases/latest).
+
+Atom will automatically update when a new release is available.
+
+### Windows
+
+Download the latest [Atom installer](https://github.com/atom/atom/releases/latest). `AtomSetup.exe` is 32-bit. For 64-bit systems, download `AtomSetup-x64.exe`.
+
+Atom will automatically update when a new release is available.
+
+You can also download `atom-windows.zip` (32-bit) or `atom-x64-windows.zip` (64-bit) from the [releases page](https://github.com/atom/atom/releases/latest).
+The `.zip` version will not automatically update.
+
+Using [Chocolatey](https://chocolatey.org)? Run `cinst Atom` to install the latest version of Atom.
+
+### Linux
+
+Atom is only available for 64-bit Linux systems.
+
+Configure your distribution's package manager to install and update Atom by following the [Linux installation instructions](https://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux) in the Flight Manual.  You will also find instructions on how to install Atom's official Linux packages without using a package repository, though you will not get automatic updates after installing Atom this way.
+
+#### Archive extraction
+
+An archive is available for people who don't want to install `atom` as root.
+
+This version enables you to install multiple Atom versions in parallel. It has been built on Ubuntu 64-bit,
+but should be compatible with other Linux distributions.
+
+1. Install dependencies (on Ubuntu): `sudo apt install git gconf2 gconf-service libgtk2.0-0 libudev1 libgcrypt20 libnotify4 libxtst6 libnss3 python3 gvfs-bin xdg-utils libcap2`
+   1. (If the `python3` package isn't available, or is too old (Python 3 should be >= 3.5), either `python2` or `python` (2.6 or 2.7) will work in its place.)
+2. Download `atom-amd64.tar.gz` from the [Atom releases page](https://github.com/atom/atom/releases/latest).
+3. Run `tar xf atom-amd64.tar.gz` in the directory where you want to extract the Atom folder.
+4. Launch Atom using the installed `atom` command from the newly extracted directory.
+
+The Linux version does not currently automatically update so you will need to
+repeat these steps to upgrade to future releases.
+
+## Building
+
+* [Linux](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-linux)
+* [macOS](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-mac)
+* [Windows](https://flight-manual.atom.io/hacking-atom/sections/hacking-on-atom-core/#platform-windows)
+
+## Discussion
+
+* Discuss Atom on our [forums](https://discuss.atom.io/)
+* Chat about Atom on our Slack team -- [instructions for joining](https://discuss.atom.io/t/join-us-on-slack/16638?source_topic_id=25406)
+
+## License
+
+[MIT](https://github.com/atom/atom/blob/master/LICENSE.md)
+
+When using the Atom or other GitHub logos, be sure to follow the [GitHub logo guidelines](https://github.com/logos).

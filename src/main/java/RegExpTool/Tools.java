@@ -256,7 +256,7 @@ public class Tools {
     //linux 会议一些特定的-l等表示动作，这样就不用刻意的去在意顺序了，这个有空再总结吧，现在没必要，自己写自己用。
     public static LinkedList<String> CsharpReg(String regexp)
     {
-        String cmd = Controller.resdir.get("RegTestapp") + " -\""+regexp+"\""+" -\""+Controller.resdir.get(".sourcetmp")+"\"";
+        String cmd = "dotnet "+Controller.resdir.get("RegTestapp") + " -\""+regexp+"\""+" -\""+Controller.resdir.get(".sourcetmp")+"\"";
         System.out.println(cmd);
         LinkedList<String> LL4= Tools.ConsoleExec(cmd);
         return LL4;

@@ -20,6 +20,6 @@ autosavehis2mypatterns=false
 #2 Cheat Sheet tab
 #3 RegExp Referance tab
 #4 hide the side tab
-defaultsidetab=0
+defaultsidetab=3
 #0 JAVA,1 Python,2 C#
-defaultsingleresult=0
+defaultsingleresult=1

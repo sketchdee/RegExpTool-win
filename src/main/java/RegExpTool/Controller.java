@@ -377,7 +377,7 @@ public class Controller {
     public static HashMap<String,String> resdir = new HashMap<String,String>(){
         {
             put("handbook","exresource"+File.separator+"helpdocument"+File.separator+"Regexp-handbook.html");
-            put("RegTestapp","exresource"+File.separator+"netcoreapp3.1"+File.separator+"RegTestapp.exe");
+            put("RegTestapp","exresource"+File.separator+"netcoreapp3.1"+File.separator+"RegTestapp.dll");
             put("PyRegexp","exresource"+File.separator+"regpython"+File.separator+"PyRegexp.py");
             put(".sourcetmp","exresource"+File.separator+".sourcetmp");
             put("History","exresource"+File.separator+"History.txt");
@@ -810,7 +810,7 @@ public class Controller {
             //java matchs
             LinkedList<String> javares = Tools.match(this.RegexpTextField.getText(), MatchText);
 
-            //java matchs
+            //python matchs
             Tools.WritePy(this.RegexpTextField.getText());
             Tools.writeinfile(Controller.resdir.get(".sourcetmp"), MatchText);
             LinkedList<String> pyres = Tools.ConsoleExec();
