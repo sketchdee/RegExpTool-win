@@ -1,5 +1,5 @@
 # Regular expression testing tools
-Regular expression testing tool, the use of Java development, convenient multi-platform offline use.Regular expression implementation engines are currently supported in Java, Python, and C#, and the current version is in beta.Using JavaFX 11 components development, follow the BSD protocol, you can obtain and modify this program for free, completely open source.
+Regular expression testing tool, the use of Java development, convenient multi-platform offline use.Regular expression implementation engines are currently supported in Java, Python, and C#, and the current version is in beta.Using JavaFX 11 components development, follow the BSD protocol, you can obtain and modify this program for free, completely open source.If you need C# and python result,you need install "python3.x" and "dotnet core",I use commandline to run script or console executable file in order to get result.
 ## How to use the code
 **1.** The project is based on IDEA, and you can also use Eclipse or another IDE. <br/>
 **2.** It is written based on the JavaFX library. JavaFX comes in different versions for different operating systems. There is no need to download the JavaFX SDK separately before you run the ".jar" package. <br/>
