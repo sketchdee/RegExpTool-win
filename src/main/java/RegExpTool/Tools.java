@@ -223,6 +223,13 @@ public class Tools {
             System.out.println("python"+" "+Controller.resdir.get("PyRegexp"));
             String line = "";
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream(), "GBK")); //控制台得到的是GBK流
+            if(File.separator.equals ( "/" ))
+                bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream(),"utf-8"));
+            /**
+             * In *nix system the encoding is "utf-8"-unicode but in windows the encoding is same as you region,chines is "GBK".
+             * If you have encoding problem please change this.
+             * */
+
             while ((line = bufferedReader.readLine()) != null) {
                 res.add(line + "\n");
             }
@@ -242,6 +249,14 @@ public class Tools {
             process = r.exec(cmd);
             String line = "";
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream(),"GBK"));
+            if(File.separator.equals ( "/" ))
+                bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream(),"utf-8"));
+            /**
+             * In *nix system the encoding is "utf-8"-unicode but in windows the encoding is same as you region,chinese is "GBK".
+             * If you have encoding problem please change this,you can also count on "microsoft" change his default console encoding.
+             * You can refactor the function.I double write in ConsoleExec(),but i want to make me remember the code is form others.
+             * */
+
             while ((line = bufferedReader.readLine()) != null) {
                 res.add(line + "\n");
             }
@@ -256,10 +271,15 @@ public class Tools {
     //linux 会议一些特定的-l等表示动作，这样就不用刻意的去在意顺序了，这个有空再总结吧，现在没必要，自己写自己用。
     public static LinkedList<String> CsharpReg(String regexp)
     {
-        String cmd = "dotnet "+Controller.resdir.get("RegTestapp") + " -\""+regexp+"\""+" -\""+Controller.resdir.get(".sourcetmp")+"\"";
+        String cmd = "dotnet "+Controller.resdir.get("RegTestapp") + " -"+regexp+" -"+Controller.resdir.get(".sourcetmp");
         System.out.println(cmd);
         LinkedList<String> LL4= Tools.ConsoleExec(cmd);
         return LL4;
     }
+    /**
+     * windows 的控制台和linux的不同，linux是没有双引号的，文件名也不允许出现空格，windows则可以。
+     * windows 控制台传参数的时候会将双引号去掉，所以你得到的是没有双引号的参数，到linux就是有双引号的参数，直接出现逻辑错误。
+     * dotnet exresource\netcoreapp3.1\RegTestapp.dll -"\w" -exresource\.sourcetmp 这条指令在linux上会传入-“w”，而windows则是-w
+     * */
 }
 
