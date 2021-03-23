@@ -91,7 +91,6 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
                 if(!isChangedbyUndo){
                     if(history.size ()==0||!history.lastElement ().equals ( jta.getText ()))
                         history.add(new Pair<> (jta.getText (),jta.getSelectionStart ()));
-                    System.out.println ("insertupdate");
                 }
             }
 
@@ -100,7 +99,6 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
                 if(!isChangedbyUndo){
                     if(history.size ()==0||!history.lastElement ().equals ( jta.getText ()))
                        history.add(new Pair<> (jta.getText (),jta.getSelectionStart ()));
-                    System.out.println ("removeupdate");
                 }
             }
 
@@ -109,7 +107,6 @@ public class Notepad extends JFrame implements ActionListener, WindowListener {
                 if(!isChangedbyUndo){
                     if(history.size ()==0||!history.lastElement ().equals ( jta.getText ()))
                         history.add(new Pair<> (jta.getText (),jta.getSelectionStart ()));
-                    System.out.println ("changedupdate");
                 }
             }
         } );
