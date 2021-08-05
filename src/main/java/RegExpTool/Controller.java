@@ -18,6 +18,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
@@ -32,10 +34,7 @@ import java.io.*;
 import java.lang.System;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 
@@ -671,10 +670,57 @@ public class Controller {
             resTablecol1.prefWidthProperty().bind(MutipleResultTableView.widthProperty().multiply(0.33));
             resTablecol2.prefWidthProperty().bind(MutipleResultTableView.widthProperty().multiply(0.33));
             resTablecol3.prefWidthProperty().bind(MutipleResultTableView.widthProperty().multiply(0.33));
-            resTablecol1.setResizable(false);
-            resTablecol2.setResizable(false);
-            resTablecol3.setResizable(false);
+            resTablecol1.setResizable(true);
+            resTablecol2.setResizable(true);
+            resTablecol3.setResizable(true);
             MutipleResultTableView.getColumns().addAll(resTablecol1, resTablecol2, resTablecol3);
+
+            /**
+             * add copy menu to the table ,when right mouse click in multiple result table.
+             * */
+            MutipleResultTableView.getSelectionModel().setCellSelectionEnabled(true);
+            MutipleResultTableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+            MenuItem item_multip = new MenuItem("Copy");
+            item_multip.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ObservableList<TablePosition> posList = MutipleResultTableView.getSelectionModel().getSelectedCells();
+                    StringBuilder clipboardString = new StringBuilder();
+                    int row_index_befor=-1;
+                    boolean isfirstitem=true;  //if the column is the first item,it will be add first,and then add '\t' or '\n'
+                    //the copy loop has many control value, if you want change it you should consider why i add this control value.
+                    for (TablePosition p : posList) {
+                        int r = p.getRow();
+                        int c = p.getColumn();
+                        //println("row:%d:column:%d".formatted ( r,c ));
+                        TableColumn col = (TableColumn) MutipleResultTableView.getColumns ().get(c);
+                        String cell = (String)col.getCellObservableValue (r).getValue ();
+                        cell=cell.trim ();
+                        if (cell == null)
+                            cell = "";
+                        if(row_index_befor==-1){
+                            clipboardString.append(cell);
+                            row_index_befor=r;
+                            continue;
+                        }
+                        if(r==row_index_befor){
+                            clipboardString.append('\t');
+                        }else{
+                            clipboardString.append('\n');
+                        }
+                        clipboardString.append(cell);
+                        row_index_befor = r;
+                    }
+                    final ClipboardContent content = new ClipboardContent();
+                    content.putString(clipboardString.toString());
+                    Clipboard.getSystemClipboard().setContent(content);
+                }
+            });
+            ContextMenu menu_multip = new ContextMenu();
+            menu_multip.getItems().add(item_multip);
+            MutipleResultTableView.setContextMenu(menu_multip);
+            /**end*/
+
             MutipleResultTableView.setItems(this.multipleResult);           //use a global this.multipleResult to make data change automaticly.
 
             //single result
@@ -685,7 +731,40 @@ public class Controller {
             singleTablecol1.setCellValueFactory(
                     new PropertyValueFactory<>("character")
             );
+
+            /**
+             * add copy menu to the table ,when right mouse click in single result table.
+             * */
+            SingleResultTableView.getSelectionModel().setCellSelectionEnabled(true);
+            SingleResultTableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+            MenuItem item_single = new MenuItem("Copy");
+            item_single.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    ObservableList<TablePosition> posList = SingleResultTableView.getSelectionModel().getSelectedCells();
+                    StringBuilder clipboardString = new StringBuilder();
+                    for (TablePosition p : posList) {
+                        int r = p.getRow();     //get row index and column index of p.
+                        int c = p.getColumn();
+                        TableColumn col = (TableColumn) SingleResultTableView.getColumns ().get(c);
+                        String cell = (String)col.getCellObservableValue (r).getValue ();
+                        if (cell == null)
+                            cell = "";
+                        clipboardString.append(cell);
+                    }
+                    final ClipboardContent content = new ClipboardContent();
+                    content.putString(clipboardString.toString());
+                    Clipboard.getSystemClipboard().setContent(content);
+                }
+            });
+            ContextMenu menu_single = new ContextMenu();
+            menu_single.getItems().add(item_single);
+            SingleResultTableView.setContextMenu(menu_single);
+            /**end*/
+
+            //add data
             this.SingleResultTableView.setItems(this.singleResult);
+
 
             //Setting TabPane,add listener to make program know the change and dynamic change the value of this.settings .
             setAutocheck.selectedProperty().addListener(new ChangeListener() {

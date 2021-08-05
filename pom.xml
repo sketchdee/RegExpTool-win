@@ -8,13 +8,14 @@
     <artifactId>RegExpTool</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <!--this plugin is used to set maven repositories to aliyum.com which is fast in china.-->
     <repositories>
         <repository>
             <id>central</id>
             <url>https://maven.aliyun.com/repository/central/</url>
         </repository>
     </repositories>
-    <!--this plugin is used to set maven repositories to aliyum.com which is fast in china.-->
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
@@ -22,6 +23,7 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <!--use the java version 15-->
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
@@ -30,6 +32,7 @@
 
     <dependencies>
         <!--change javafx version here.-->
+        <!--can't run without javafx local library,this plugin is not work.TODO neel fix can't execute bug.-->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -77,46 +80,20 @@
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <configuration>
-                    <outputDirectory>${project.build.directory}/libs</outputDirectory>
-                    <excludeTransitive>false</excludeTransitive> <!-- 表示是否不包含间接依赖的包 -->
-                    <stripVersion>false</stripVersion> <!-- 去除版本信息 -->
-                </configuration>
-
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <!-- 拷贝项目依赖包到libs/目录下 -->
-                            <outputDirectory>${project.build.directory}/install/libs</outputDirectory>
-                            <excludeTransitive>false</excludeTransitive>
-                            <stripVersion>false</stripVersion>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- 设置jar的入口类 -->
-            <!-- 打包插件 -->
+            <!-- Packaging plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
                 <configuration>
                     <archive>
-                        <!-- 生成MANIFEST.MF的设置 -->
+                        <!-- generate MANIFEST.MF -->
                         <manifest>
                             <!-- 为依赖包添加路径, 这些路径会写在MANIFEST文件的Class-Path下 -->
+                            <!--Add paths for dependency packages that are written under class-path in the MANIFEST file-->
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <!-- jar启动入口类，这个需要修改-->
+                            <!-- jar Entrance Main class-->
                             <mainClass>RegExpTool.Main</mainClass>
                         </manifest>
                     </archive>
@@ -127,7 +104,4 @@
 
         </plugins>
     </build>
-
-
-    
 </project>
